@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email veryfication solution</title>
+  </head>
+  <body>
+    <script>
+       // Question: Accept input from a user and if user inputs a mail return asterics else return users input 
+      // ASSIGNMENT SOLUTION.....
+
+      let usersInput = prompt("Enter anything you like other than a mail");
+      let pattern1 = /@gmail.com/gi;
+      let pattern2 = /@email.com/gi;
+      let pattern3 = /@yahoo.com/gi;
+      let output1 = pattern1.test(usersInput);
+      let output2 = pattern2.test(usersInput);
+      let output3 = pattern3.test(usersInput);
+      // let output = usersInput.match(pattern);
+      if (output1 == true || output2 == true || output3 == true) {
+        alert(usersInput.replace(usersInput, "********"));
+      } else {
+        alert(usersInput);
+      }
+
+    </script>
+  </body>
+</html>
